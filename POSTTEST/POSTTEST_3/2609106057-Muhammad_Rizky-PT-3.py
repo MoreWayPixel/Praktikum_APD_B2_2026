@@ -1,8 +1,8 @@
 Nama = input("Masukan Nama Anda : ").strip()
-NIM =  input("Masukan NIM Anda : ").strip()
+NIM =  int(input("Masukan NIM Anda : ").strip())
 
 if Nama == "Rizky":
-    if NIM == "057":
+    if NIM == 57:
         print("========================================")
         print("           LOGIN BERHASIL")
         print("========================================")
@@ -37,17 +37,16 @@ if Nama == "Rizky":
             persentase_bonus = 0.12
 
         else:
-            print("\n========================================")
+            print("========================================")
             print("       PILIHAN MISI TIDAK TERSEDIA")
             print("========================================")
             print("Silakan pilih misi dari nomor 1 sampai 4.")
 
-        # ============== PERHITUNGAN ==============
         if pilihan >= 1 and pilihan <= 4:
             reward_bonus = int(reward_dasar * persentase_bonus)
             reward_akhir = int(reward_dasar + reward_bonus)
 
-            print("\n========================================")
+            print("========================================")
             print("            HASIL MISI")
             print("========================================")
             print("Nama Misi       :", nama_misi)
@@ -61,7 +60,7 @@ if Nama == "Rizky":
         print("========================================")
         print("              NIM Salah")
 else:
-    if NIM =="057":
+    if NIM == 57:
         print("========================================")
         print("             LOGIN GAGAL")
         print("========================================")
