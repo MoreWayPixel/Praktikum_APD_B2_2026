@@ -1,8 +1,8 @@
 Nama = input("Masukan Nama Anda : ").strip()
-NIM =  int(input("Masukan NIM Anda : ").strip())
+NIM =  input("Masukan NIM Anda : ").strip()
 
 if Nama == "Rizky":
-    if NIM == 57:
+    if NIM == "57":
         print("========================================")
         print("           LOGIN BERHASIL")
         print("========================================")
@@ -60,7 +60,7 @@ if Nama == "Rizky":
         print("========================================")
         print("              NIM Salah")
 else:
-    if NIM == 57:
+    if NIM == "57":
         print("========================================")
         print("             LOGIN GAGAL")
         print("========================================")
