@@ -2,10 +2,10 @@ percobaan = 0
 login_berhasil = False
 
 while percobaan < 3:
-    Nama = input("Masukan Nama Anda : ").strip()
+    Nama = input("Masukan Nama Anda : ").strip().lower()
     NIM =  input("Masukan NIM Anda : ").strip()
 
-    if Nama == "Rizky":
+    if Nama == "rizky":
         if NIM == "57":
             print("========================================")
             print("           LOGIN BERHASIL")
@@ -89,8 +89,7 @@ else:
 
         for i in range(jumlah_paket):
             total_porsi = total_porsi + porsi_paket
-
-        penerima_manfaat = total_porsi
+            penerima_manfaat = total_porsi
 
         if total_porsi >= 20:
             bonus = "5 paket buah"
