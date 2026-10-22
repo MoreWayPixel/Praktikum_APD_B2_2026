@@ -1,8 +1,5 @@
-import os 
+import os
 
-def bersihkan_layar():
-    os.system("cls" if os.name == "nt" else "clear")
-    
 akun = [
     ["rizky", "admin123", "Admin"],
     ["buma", "123", "Hunter"] #akun uji coba
@@ -56,7 +53,7 @@ monster = [
 ]
 
 while True:
-    bersihkan_layar()
+    os.system("cls" if os.name == "nt" else "clear")
     print("=========================================================")
     print(r"""
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀
@@ -93,7 +90,7 @@ while True:
     pilihan = input("Pilih menu: ")
 
     if pilihan == "1":
-        bersihkan_layar()
+        os.system("cls" if os.name == "nt" else "clear")
         print("=== LOGIN ===")
         username = input("Username: ").strip().lower()
         password = input("Password: ").strip()
@@ -106,7 +103,7 @@ while True:
                 login_berhasil = True
                 role = data[2]
                 break
-
+                
         
         if login_berhasil:
             print("Login berhasil!")
@@ -115,7 +112,7 @@ while True:
 
             if role == "Hunter":
                 while True:
-                    bersihkan_layar()
+                    os.system("cls" if os.name == "nt" else "clear")
                     print(r"""                       
                        /\
                       /  \
@@ -140,14 +137,19 @@ while True:
                     menu_hunter = input("Pilih menu: ")
 
                     if menu_hunter == "1":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("================ DAFTAR MONSTER ================")
 
                         for data in monster:
                             print(data[0], "-", data[1]) 
 
                     elif menu_hunter == "2":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
+                        print("================ DAFTAR MONSTER ================")
+                        
+                        for data in monster:
+                            print(data[0], "-", data[1])
+                            
                         print("================ DETAIL MONSTER ================")
                         id_monster = input("Masukkan ID Monster: ").strip().upper()
 
@@ -166,15 +168,15 @@ while True:
                                 break
 
                         if not monster_ditemukan:
-                                print("Monster tidak ditemukan!")
+                            print("Monster tidak ditemukan!")
                         
                     elif menu_hunter == "3":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("Logout berhasil!")
                         break
 
                     else:
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("Pilihan tidak valid! Silahkan pilih menu 1-3!")
                         
                     input("Tekan Enter untuk kembali ke menu...") 
@@ -182,7 +184,7 @@ while True:
             else:
                 role == "Admin"
                 while True:
-                    bersihkan_layar()
+                    os.system("cls" if os.name == "nt" else "clear")
                     print(r"""
                       /\_/\
                      /_____\
@@ -208,14 +210,19 @@ while True:
                     menu_admin = input("Pilih menu: ")
 
                     if menu_admin == "1":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("================ DAFTAR MONSTER ================")
 
                         for data in monster:
                             print(data[0], "-", data[1])
 
                     elif menu_admin == "2":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
+                        print("================ DAFTAR MONSTER ================")
+                                                
+                        for data in monster:
+                            print(data[0], "-", data[1])
+                                                    
                         print("================ DETAIL MONSTER ================")
                         id_monster = input("Masukkan ID Monster: ").strip().upper()
 
@@ -237,7 +244,7 @@ while True:
                             print("Monster tidak ditemukan!")
                             
                     elif menu_admin == "3":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("================ TAMBAH MONSTER ================")
 
                         id_monster = input("Masukkan ID Monster: ").strip().upper()
@@ -261,7 +268,7 @@ while True:
                             elemen = input("Elemen/Status: ").strip()
                             habitat = input("Habitat: ").strip()
                             kelemahan = input("Kelemahan: ").strip()
-                            ancaman = input("Tingkat Ancaman: ").strip().capitalize()
+                            ancaman = input("Tingkat Ancaman (harus Rendah/Menengah/Tinggi!): ").strip().capitalize()
 
                             if nama == "" or jenis == "" or elemen == "" or habitat == "" or kelemahan == "" or ancaman == "":
                                 print("Semua data monster harus diisi!")
@@ -278,7 +285,7 @@ while True:
                                 print("Monster berhasil ditambahkan!")
 
                     elif menu_admin == "4":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("================ UBAH DATA MONSTER ================")
 
                         id_monster = input("Masukkan ID Monster yang ingin diubah: ").strip().upper()
@@ -357,7 +364,7 @@ while True:
                             print("Monster tidak ditemukan!")
 
                     elif menu_admin == "5":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("================ HAPUS MONSTER ================")
 
                         id_monster = input("Masukkan ID Monster yang ingin dihapus: ").strip().upper()
@@ -389,12 +396,12 @@ while True:
                             print("Monster tidak ditemukan!")
 
                     elif menu_admin == "6":
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("Logout berhasil!")
                         break
 
                     else:
-                        bersihkan_layar()
+                        os.system("cls" if os.name == "nt" else "clear")
                         print("Pilihan tidak valid! Silahkan pilih menu 1-6!")
                         
                     input("Tekan Enter untuk kembali ke menu...") 
@@ -404,7 +411,7 @@ while True:
             print("Silakan Register terlebih dahulu jika belum memiliki akun.")
 
     elif pilihan == "2":
-        bersihkan_layar()
+        os.system("cls" if os.name == "nt" else "clear")
         print("=== REGISTER ===")
         username = input("Buat username: ")
         password = input("Buat password: ")
@@ -428,7 +435,7 @@ while True:
                 print("Username sudah digunakan!")
 
     elif pilihan == "3":
-        bersihkan_layar()
+        os.system("cls" if os.name == "nt" else "clear")
         print("""
         ⬜⬜⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬛⬛⬜⬜
         ⬜⬜⬛🟫⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬛🟫⬛⬜⬜
@@ -459,7 +466,7 @@ while True:
         break
 
     else:
-        bersihkan_layar()
+        os.system("cls" if os.name == "nt" else "clear")
         
         print("Pilihan tidak valid! Silahkan pilih menu 1-3!")
     
