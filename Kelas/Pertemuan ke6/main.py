@@ -99,25 +99,35 @@ game = {
 
 # print(menu)
 
-menu = {
-    "ayam" : ["ayam geprek", "ayam goreng", "ayam bakar"],
-    "nasi" : ["nasi goreng", "nasi uduk"],
-    "mie" : ["mie goreng rendang", "mie goreng aceh"],
-    "kuah" : ["soto", "rawon", "sop iga"]
+# menu = {
+#     "ayam" : ["ayam geprek", "ayam goreng", "ayam bakar"],
+#     "nasi" : ["nasi goreng", "nasi uduk"],
+#     "mie" : ["mie goreng rendang", "mie goreng aceh"],
+#     "kuah" : ["soto", "rawon", "sop iga"]
+# }
+
+# print(menu.get("ayam")[2])
+
+# mahasiswa = {
+#     "054":{"nama":"Daniel",
+#            "IPK": 4.00
+#            },
+#     "056":{"nama":"Alfi",
+#                "IPK": 4.00
+#                },
+#     "058":{"nama":"Sartika",
+#                "IPK": 4.00
+#                },
+# }
+
+# print(mahasiswa["056"]["nama"])
+
+mhs = {
+    "nama" : "Muhammad Rizky",
+    "NIM" : 2609106057,
+    "prodi" : "Informatika",
+    "semester" : "ganjil" 
 }
 
-print(menu.get("ayam")[2])
-
-mahasiswa = {
-    "054":{"nama":"Daniel",
-           "IPK": 4.00
-           },
-    "056":{"nama":"Alfi",
-               "IPK": 4.00
-               },
-    "058":{"nama":"Sartika",
-               "IPK": 4.00
-               },
-}
-
-print(mahasiswa["056"]["nama"])
+mhs["alamat"] = "jalan alam segar 1"
+mhs["email"] = "mhrizky017@gmail.com"
